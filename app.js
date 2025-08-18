@@ -80,3 +80,21 @@ function replay() {
     currentIndex = 0;
     location.reload();
 }
+
+
+const zoomBtn = document.querySelector('.zoom');
+const zoomImg = document.querySelector('.doggo');
+
+const restoreZoom = [
+    { scale: 5 },
+    { scale: 1 },
+];
+
+const zoomTiming = {
+    duration: 2000,
+    iterations: 1,
+}
+
+zoomBtn.addEventListener('click', () => {
+    zoomImg.animate(restoreZoom, zoomTiming);
+});
