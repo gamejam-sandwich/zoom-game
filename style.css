@@ -3,14 +3,15 @@ body {
     background-color: #EFEFEF;
 }
 
-h1 {
+.title {
     text-align: center;
     color: #000000;
 }
 
-button {
+.start {
     display: block;
     margin: 0 auto;
+    margin-top: 10px;
     padding: 10px 20px;
     background-color: #B6C4A2;
     border: none;
@@ -18,11 +19,11 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.start:hover {
     background-color: #93C0A4;
 }
 
-.quiz {
+.quiz-area {
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
@@ -33,6 +34,8 @@ button:hover {
 
 .question {
     margin-bottom: 20px;
+    padding: 20px;
+    justify-self: center;
 }
 
 .options {
@@ -50,21 +53,12 @@ button:hover {
     transform: scaleX(-1);
 }
 
-.zoom-game {
+.the-object {
     display: flex;
     justify-content: center;
     border: 2px solid black;
     margin: 0 auto;
-    padding: 20px;
     overflow: hidden;
     height: 200px;
-    width: 15%;
-}
-
-.doggo {
-    scale: 5;
-}
-
-.zoom-out {
-    padding: 10px;
+    width: 200px;
 }
