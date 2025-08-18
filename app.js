@@ -87,6 +87,7 @@ const boxDiv = document.querySelector('.quiz-area');
 const imageDiv = document.querySelector('.the-object');
 const zoomImg = document.querySelector('.zoom-image');
 const optionsDiv = document.querySelector('.options');
+const navDiv = document.querySelector('.nav-buttons');
 const startBtn = document.querySelector('.start');
 
 // Variables
@@ -117,12 +118,13 @@ function showImage() {
     startBtn.style.display = 'none';
     zoomImg.style.scale = 5;
     const currentImage = imgData[currentIndex];
-    zoomImg.innerHTML = currentImage.imgSrc;
+    zoomImg.src = currentImage.imgSrc;
 
+    optionsDiv.innerHTML = '';
     currentImage.options.forEach(option => {
         const optionBtn = document.createElement('button');
         optionBtn.innerText = option;
-        boxDiv.appendChild(optionBtn);
+        optionsDiv.appendChild(optionBtn);
         optionBtn.addEventListener('click', selectAnswer);
     })
 }
@@ -134,7 +136,7 @@ const restoreZoom = [
 ];
 
 const zoomTiming = {
-    duration: 2000,
+    duration: 1000,
     iterations: 1,
 }
 
@@ -146,12 +148,19 @@ function selectAnswer(event) {
     const animation = zoomImg.animate(restoreZoom, zoomTiming);
     animation.onfinish = () => {
         zoomImg.style.scale = 1;
+        if (selectedBtn.innerText === answer) {
+            score++;
+        }
+        const nextBtn = document.createElement('button');
+        nextBtn.innerText = 'Next ->';
+        nextBtn.className = 'start';
+        navDiv.appendChild(nextBtn);
+        nextBtn.addEventListener('click', showNext);
     };
+}
 
-    if (selectedBtn.innerText === answer) {
-        score++;
-    }
-
+function showNext() {
+    navDiv.innerHTML = '';
     currentIndex++;
     if (currentIndex < imgData.length) {
         showImage();
@@ -162,13 +171,13 @@ function selectAnswer(event) {
 
 // End of game
 function showScore() {
-    gameDiv.innerHTML = `
+    boxDiv.innerHTML = `
     <h1>Game Finished!</h1>
     <p>Your Score: ${score}/${imgData.length}
     `;
     const restartBtn = document.createElement('button');
     restartBtn.innerText = 'Play again?';
-    gameDiv.appendChild(restartBtn);
+    boxDiv.appendChild(restartBtn);
     restartBtn.addEventListener('click', replay);
 }
 
