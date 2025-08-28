@@ -1,65 +1,89 @@
 body {
-    font-family: Haettenschweiler, sans-serif;
+    font-family: Helvetica, sans-serif;
     background-color: #EFEFEF;
 }
 
-.title {
-    text-align: center;
-    color: #000000;
+/*TOP SCREEN*/
+.upper-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    height: 450px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid;
+    background-image: url('images/yellow_dots.jpg');
 }
 
-.start {
+.title-img {
     display: block;
     margin: 0 auto;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #B6C4A2;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 20px;
 }
 
-.start:hover {
-    background-color: #93C0A4;
-}
-
-.quiz-area {
-    max-width: 500px;
+p {
+    display: table;
     margin: 0 auto;
     padding: 20px;
-    background-color: #FFFFFF;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.image-box {
+    margin: 0 auto;
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    border: 10px groove white;
+}
+
+.image-prompt {
+    height: 200px;
+    width: 200px;
+}
+
+/*BOTTOM SCREEN*/
+.lower-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 400px;
+    height: 250px;
+    background-image: url(/images/red_questions.jpg);
+    background-size: 400px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(198, 222, 60, 0.2);
 }
 
-.question {
-    display: table;
-    margin: 0 auto;
+.start-button,
+.next-button {
+    background-color: #D45B00;
+    cursor: pointer;
+    padding: 10px 80px;
+    border-radius: 5px;
+    font-size: 1.2rem;
 }
 
-.options {
+.next-button {
+    position: fixed;
+    bottom: 509px;
+    right: 367px;
+    padding: 10px 50px;
+}
+
+.start-button:hover,
+.next-button:hover {
+    background-color: #01F2EE;
+}
+
+.options-div {
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(2, 1fr);
-}
-
-.flip-pic {
-    width: 50px;
-    height: 50px;
-}
-
-.flip-pic:hover {
-    transform: scaleX(-1);
-}
-
-.the-object {
-    display: flex;
-    justify-content: center;
-    border: 2px solid black;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    overflow: hidden;
-    height: 200px;
-    width: 200px;
 }

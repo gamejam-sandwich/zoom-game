@@ -9,18 +9,21 @@
 </head>
 
 <body>
-    <div class="quiz-area">
-        <h1 class="title">Zoomed-In</h1>
-        <span class="question">What is this object?</span>
-        <div class="options"></div>
+    <div class="upper-screen">
+        <img class="title-img" src="images/title.png" alt="ZOOM-QUIZ">
+        <p class="captions">What is that super-zoomed-in item?!<br />
+            Pick correctly from the 3 choices!<br /><br />
+            Can you get them all right?
+        </p>
+        <div class="image-box">
+            <img class="image-prompt" src="images/meow_title.jpg" alt="DOG">
+        </div>
+    </div>
 
-        <div class="the-object">
-            <img class="zoom-image" src="images/hmm.jpg" alt="DOG">
-        </div>
-        <div class="nav-buttons">
-            <button class="start">Start!</button>
-        </div>
-        <img class="flip-pic" src="images/flip_img.jpg" alt="FLIP">
+    <div class="lower-screen">
+        <div class="options-div"></div>
+        <button class="start-button">Start</button>
+        <button class="next-button">Next</button>
     </div>
 
     <script src="app.js"></script>
