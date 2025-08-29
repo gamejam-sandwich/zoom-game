@@ -71,9 +71,6 @@ p {
 }
 
 .next-button {
-    position: fixed;
-    bottom: 509px;
-    right: 367px;
     padding: 10px 50px;
 }
 
