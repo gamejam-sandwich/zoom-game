@@ -1,9 +1,13 @@
+import foods from "./foodList.js";
+
 // Upper Screen selectors
 const upperScreen = document.querySelector('.upper-screen');
 const title = document.querySelector('.title');
 const captions = document.querySelector('.captions');
+const imagePrompt = document.querySelector('.image-prompt');
+
 // Lower Screen
-const lowerScreen = document.querySelector('.quiz-screen')
+const lowerScreen = document.querySelector('.quiz-screen');
 const optionsDiv = document.querySelector('.options-div');
 const startBtn = document.querySelector('.start-button');
 const nextBtn = document.querySelector('.next-button');
@@ -13,12 +17,10 @@ let index = 0;
 let score = 0;
 
 // Image data
-//Use JSON file and fetch
-//Readable stream
-//Big array
+
 
 startBtn.addEventListener('click', startGame);
 
 function startGame() {
-    alert('game start');
+    imagePrompt.src = `images/foods/item_Food000.png`;
 }
