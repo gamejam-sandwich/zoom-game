@@ -55,7 +55,7 @@ p {
     margin: 0 auto;
     padding: 20px;
     max-width: 400px;
-    height: 250px;
+    height: 300px;
     background-image: url(/images/red_questions.jpg);
     background-size: 400px;
     border-radius: 5px;
@@ -63,7 +63,8 @@ p {
 }
 
 .start-button,
-.next-button {
+.next-button,
+.option-button {
     background-color: #D45B00;
     cursor: pointer;
     padding: 10px 80px;
@@ -73,15 +74,25 @@ p {
 
 .next-button {
     padding: 10px 50px;
+    align-self: end;
+    margin-left: auto;
+}
+
+.option-button {
+    margin-bottom: 10px;
 }
 
 .start-button:hover,
-.next-button:hover {
+.next-button:hover,
+.option-button:hover {
     background-color: #01F2EE;
 }
 
 .options-div {
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
+}
+
+.disabled-btns {
+    pointer-events: none;
 }
