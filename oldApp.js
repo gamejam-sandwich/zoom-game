@@ -1,4 +1,4 @@
-/*// Selectors
+// Selectors
 const boxDiv = document.querySelector('.quiz-area');
 const zoomImg = document.querySelector('.zoom-image');
 const optionsDiv = document.querySelector('.options');
@@ -100,4 +100,3 @@ function replay() {
     currentIndex = 0;
     location.reload();
 }
-*/

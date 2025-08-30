@@ -38,6 +38,7 @@ p {
     height: 200px;
     width: 200px;
     overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.512);
     border: 10px groove white;
 }
 
